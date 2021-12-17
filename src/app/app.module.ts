@@ -16,8 +16,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { ButtonsModule, InputsModule, MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
 import {MatInputModule} from '@angular/material/input';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
+import { SocialMediaComponent } from './social-media/social-media.component';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import {MatInputModule} from '@angular/material/input';
     ResumeComponent,
     HomeComponent,
     ContactComponent,
+    SocialMediaComponent,
 
   ],
   imports: [
@@ -43,7 +46,8 @@ import {MatInputModule} from '@angular/material/input';
     MDBBootstrapModule.forRoot(),
     ButtonsModule,
     InputsModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
 
 
   ],

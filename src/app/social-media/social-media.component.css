@@ -1,0 +1,11 @@
+img{
+
+  height: 120px;
+  width: 120px;
+}
+.bg{
+background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Machapuchare_Himal-3797.jpg/640px-Machapuchare_Himal-3797.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+
+}

@@ -1,28 +1,49 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h2>Contact Me</h2>
-    </div>
-  </div>
+<app-nav></app-nav>
+<h3>
+  Contact Jordan!
+  <small class="text-muted">I am excited to hear from you!</small>
+</h3>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+<div class="input-group input-group-lg">
+  <span class="input-group-text" id="name">Full Name</span>
+  <input type="text" class="form-control" aria-label="Full Name" aria-describedby="Contact Form" name="name" ngModel required name>
 </div>
+<br>
+<div class="input-group input-group-lg">
+  <span class="input-group-text" id="phone">Phone</span>
+  <input type="text" class="form-control" aria-label="Phone Number" aria-describedby="Contact Form" ngModel name="phone">
+</div>
+<br>
+<div class="input-group input-group-lg">
+  <span class="input-group-text" id="email">Email</span>
+  <input type="text" class="form-control" aria-label="email" aria-describedby="Contact Form " ngModel name="email" required email #email="ngModel">
+</div>
+<span class="help-block" *ngIf="!email.valid && email.touched"> <br>Please enter a valid email!</span>
+<br>
 
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Name</mat-label>
-    <input matInput placeholder="Ex. Joe Smith" value="Full Name" />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Email</mat-label>
-    <input matInput placeholder="Ex. test@test.com " value="Email" />
-  </mat-form-field>
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Phone</mat-label>
-    <input matInput placeholder="Ex. 270.333.3333" value="Phone Number" />
-  </mat-form-field>
+<p>What can I help you with?</p>
 
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-  <button class="btn btn-btn">Submit</button>
+<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+  <input type="checkbox" class="btn-check" id="PPC" autocomplete="off">
+  <label class="btn btn-outline-primary" for="PPC">Pay per click advertising</label>
+
+  <input type="checkbox" class="btn-check" id="SEO" autocomplete="off">
+  <label class="btn btn-outline-primary" for="SEO">SEO </label>
+
+  <input type="checkbox" class="btn-check" id="Socials" autocomplete="off">
+  <label class="btn btn-outline-primary" for="Socials">Social Media</label>
+
+  <input type="checkbox" class="btn-check" id="Web dev" autocomplete="off">
+  <label class="btn btn-outline-primary" for="Web dev">Web Development</label>
+
+  <input type="checkbox" class="btn-check" id="web des" autocomplete="off">
+  <label class="btn btn-outline-primary" for="web des">Web Design</label>
+
+</div>
+<div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Additional Info</label>
+</div>
+<button type="submit" class="btn btn-btn-success">Submit</button>
 </form>
+<app-social-media></app-social-media>
