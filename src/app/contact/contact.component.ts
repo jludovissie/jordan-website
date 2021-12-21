@@ -7,6 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  submitted= false;
 
   constructor() { }
 
@@ -14,6 +15,10 @@ export class ContactComponent implements OnInit {
 
   }
   onSubmit(form: NgForm){
-    console.log(form)
+    console.log(form.value)
+
+    this.submitted= true;
   }
+
+
 }

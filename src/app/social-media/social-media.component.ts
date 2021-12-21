@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialMediaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
-
+ getTrends(){
+   this.http.get('https://www.google.com/trends/').subscribe((response) =>{
+     console.log('response', response)
+   })
+ }
 }

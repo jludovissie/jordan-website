@@ -20,6 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     HomeComponent,
     ContactComponent,
     SocialMediaComponent,
+
 
   ],
   imports: [
@@ -47,7 +49,8 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     ButtonsModule,
     InputsModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
 
   ],
